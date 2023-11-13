@@ -19,9 +19,8 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Archive production artifacts
+      - name: Upload files
         uses: actions/upload-artifact@v3
         with:
-          name: dist-without-markdown
-          path: |
-            CAN
+          name: upload things
+          path: CAN
