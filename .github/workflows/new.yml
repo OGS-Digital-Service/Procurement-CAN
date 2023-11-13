@@ -22,4 +22,4 @@ jobs:
       - run: npm run build
       - uses: actions/upload-artifact@v3
         with:
-          path: ./CAN/new # or path/to/artifact
+          path: ./_site # or path/to/artifact
