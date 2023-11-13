@@ -14,7 +14,6 @@ module.exports = function(eleventyConfig){
         markdownTemplateEngine: "njk",    
     dir: {
         layouts: "_layouts"
-
     },
     }
    
