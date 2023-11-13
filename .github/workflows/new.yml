@@ -9,12 +9,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,5 +22,4 @@ jobs:
       - run: npm run build
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: ./CAN # or path/to/artifact
+          path: ./CAN/new # or path/to/artifact
