@@ -10,16 +10,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Build using node.js
-        uses: actions/setup-node@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
         with:
-          node-version: '16'
-      - run: npm install
-      - run: npm run build
-      - uses: actions/upload-artifact@v3
-        with:
-          path: ./_site # or path/to/artifact
+          name: dist-without-markdown
+          path: |
+            CAN
