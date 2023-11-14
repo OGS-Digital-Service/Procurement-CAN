@@ -27,6 +27,6 @@ jobs:
       - name: commit files
         run: |
               git add ./_site 
-              git commit "upload things"
+              git commit -a
               git push
 
