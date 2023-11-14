@@ -29,6 +29,6 @@ jobs:
               git add ./_site
               git config --global user.email "digital.services@ogs.ny.gov"
               git config --global user.name "Digital Services" 
-              git commit -a
+              git commit -a -m "update can pages"
               git push
 
