@@ -26,7 +26,9 @@ jobs:
           path: _site
       - name: commit files
         run: |
-              git add ./_site 
+              git add ./_site
+              git config --global user.email "digital.services@ogs.ny.gov"
+              git config --global user.name "Digital Services" 
               git commit -a
               git push
 
