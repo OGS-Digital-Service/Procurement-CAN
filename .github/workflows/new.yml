@@ -26,7 +26,7 @@ jobs:
           path: _site
       - name: commit files
         run: |
-              git add . 
-              git commit "update can page"
+              git add ./_site 
+              git commit "upload things"
               git push
 
