@@ -15,8 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: create branch
-        run: git branch ijeduh488
+      - name: create tag
+        run: git tag --date
       - name: npm install, build
         run: |
           npm install
