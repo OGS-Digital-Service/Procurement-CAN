@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: create tag
-        run: git tag --date
+        run: git tag 231345
       - name: npm install, build
         run: |
           npm install
