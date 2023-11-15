@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: create tag
-        run: git tag 231345
       - name: npm install, build
         run: |
           npm install
@@ -24,9 +22,9 @@ jobs:
       - name: Upload files
         uses: actions/upload-artifact@v3
         with:
-          name: upload things
+          name: upload artifact
           path: _site
-      - name: commit files
+      - name: commit files from artifact build
         run: |
               git add ./_site
               git config --global user.email "digital.services@ogs.ny.gov"
